@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>JS</title>
+<script lang="javascript">
+function Add(event) 
+{
+            event.preventDefault();
+            var a,b,c;
+            const first= parseInt(document.getElementById('first').value);
+            const second = parseInt(document.getElementById('second').value);
+            const result=first+second;
+            document.getElementById('result').value=result;
+            
+}
+</script>
+</head>
+<body>
+<form onsubmit="Add(event)">
+<h1><center>BASIC JS</center></h1>
+<center>
+<label for="first">My First Number is:</label>
+<input type="text" id="first" name="firstnumber" required>
+<br><br>
+<label for="second">My Second Number is:</label>
+<input type="text" id="second" name="secondnumber" required>
+<br><br>
+<label for="result">Result :</label>
+<input type="text" id="result" name="result" readonly>
+<br><br>
+<input type="submit" value="Add">
+</form>
+</center>
+</body>
+</html>

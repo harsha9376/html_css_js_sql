@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>Form Validation</title>
+<style>
+body{
+background-color:lightgreen;
+}
+h1{
+text-align:center;
+font-family:Times New Roman;
+font-color:blue;
+}
+.container {
+            width: 350px;
+            margin: auto;
+            padding-top: 50px;
+            border: solid ;
+            padding: 20px;
+            background-color: lightblue;
+        }
+</style>
+<script lang="javascript">
+function validateForm() {
+            var name = document.getElementById("name").value;
+            var address = document.getElementById("address").value;
+            var email = document.getElementById("email").value;
+            var college = document.getElementById("college").value;
+            var contact = document.getElementById("contact").value;
+            var course = document.getElementById("course").value;
+            var startYear = document.getElementById("start-year").value;
+            var endYear = document.getElementById("end-year").value;
+
+            if (name == "") {
+                alert("Please enter your name.");
+                return false;
+            }
+            if (address == "") {
+                alert("Please enter your address.");
+                return false;
+            }
+            if (email == "") {
+                alert("Please enter your email.");
+                return false;
+            }
+            if (college == "") {
+                alert("Please enter your college name.");
+                return false;
+            }
+            if (contact == "") {
+                alert("Please enter your contact number.");
+                return false;
+            }
+            if (course == "") {
+                alert("Please enter your course name.");
+                return false;
+            }
+            if (startYear == "") {
+                alert("Please enter your course start year.");
+                return false;
+            }
+            if (endYear == "") {
+                alert("Please enter your course end year.");
+                return false;
+            }
+            return true;
+        }
+</script>
+</head>
+<body>
+<h1>REGISTRATION FORM</h1>
+<div class="container">
+<form onsubmit="register()">
+<center>
+<label for="name">NAME :</label>
+<input type="text" id="first" name="name" required>
+<br><br>
+<label for="address">ADDRESS :</label>
+<input type="text" id="second" name="address" required>
+<br><br>
+<label for="email">E-MAIL ID :</label>
+<input type="text" id="third" name="email" required>
+<br><br>
+<label for="collegename">COLLEGE NAME :</label>
+<input type="text" id="fourth" name="collegename" required>
+<br><br>
+<label for="contact">CONTACT NO :</label>
+<input type="number" id="fifth" name="number" required>
+<br><br>
+<label for="coursename">COURSE NAME :</label>
+<input type="text" id="sixth" name="coursename" required>
+<br><br>
+<label for="coursesyear">COURSE START YEAR :</label>
+<input type="text" id="seventh" name="courseyear" required>
+<br><br>
+<label for="courseeyear">COURSE END YEAR :</label>
+<input type="text" id="eighth" name="courseeyear" required>
+<br><br>
+<input type="submit" value="Register">
+</center>
+</form>
+</div>
+</body>
+</html>
